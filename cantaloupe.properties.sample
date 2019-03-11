@@ -150,6 +150,12 @@ FilesystemSource.BasicLookupStrategy.path_suffix =
 HttpSource.trust_all_certs = false
 HttpSource.request_timeout =
 
+# Tells the Jetty HTTP client which cipher suites to exclude.
+# To exclude multiple cipher suites, separate them with commas.
+# To exclude no cipher suites at all, enable the option but
+# leave the value empty
+# HttpSource.exclude_cipher_suites =
+
 # Tells HttpSource how to look up resources. Allowed values are
 # `BasicLookupStrategy` and `ScriptLookupStrategy`. ScriptLookupStrategy
 # uses a delegate method for dynamic lookups; see the user manual.

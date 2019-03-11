@@ -110,6 +110,7 @@ public enum Key {
     HTTPSOURCE_LOOKUP_STRATEGY("HttpSource.lookup_strategy"),
     HTTPSOURCE_REQUEST_TIMEOUT("HttpSource.request_timeout"),
     HTTPSOURCE_TRUST_ALL_CERTS("HttpSource.trust_all_certs"),
+    HTTPSOURCE_EXCLUDE_CIPHER_SUITES("HttpSource.exclude_cipher_suites"),
     HTTPSOURCE_URL_PREFIX("HttpSource.BasicLookupStrategy.url_prefix"),
     HTTPSOURCE_URL_SUFFIX("HttpSource.BasicLookupStrategy.url_suffix"),
     HTTPS_ENABLED("https.enabled"),

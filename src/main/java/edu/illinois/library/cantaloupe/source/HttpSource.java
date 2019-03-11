@@ -249,6 +249,12 @@ class HttpSource extends AbstractSource implements StreamSource {
             SslContextFactory sslContextFactory =
                     new SslContextFactory(trustInvalidCerts);
 
+            final String excludeCipherSuites = config.getString(
+                    Key.HTTPSOURCE_EXCLUDE_CIPHER_SUITES);
+            if (excludeCipherSuites != null) {
+                sslContextFactory.setExcludeCipherSuites(excludeCipherSuites.split(","));
+            }
+
             HttpClientTransport transport = new HttpClientTransportOverHTTP();
             jettyClient = new HttpClient(transport, sslContextFactory);
             jettyClient.setFollowRedirects(true);
